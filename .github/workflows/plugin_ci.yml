@@ -29,16 +29,14 @@ jobs:
           cmake ..
           make
 
+      - name: Package plugin as .tar.gz
+        run:  mkdir -p package/simple_belfast_pi cp build/src/libsimple_belfast_pi.so package/simple_belfast_pi/        cp plugin.xml package/simple_belfast_pi/            cd package            tar -czf ../simple_belfast_pi.tar.gz simple_belfast_pi
+
+
       - name: Upload plugin binary
         uses: actions/upload-artifact@v4
         with:
           name: simple_belfast_pi-linux
           path: build/src/libsimple_belfast_pi.so
 
-      - name: Package plugin as .tar.gz
-          run: |
-            mkdir -p package/simple_belfast_pi
-            cp build/src/libsimple_belfast_pi.so package/simple_belfast_pi/
-            cp plugin.xml package/simple_belfast_pi/
-            cd package
-            tar -czf ../simple_belfast_pi.tar.gz simple_belfast_pi
+
