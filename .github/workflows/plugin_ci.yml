@@ -33,7 +33,7 @@ jobs:
         run: |
           mkdir -p package/simple_belfast_pi
           cp build/src/libsimple_belfast_pi.so package/simple_belfast_pi/
-          cp plugin.xml package/simple_belfast_pi/
+          cp metadata.xml package/simple_belfast_pi/
           cd package
           tar -czf ../simple_belfast_pi.tar.gz simple_belfast_pi
 
