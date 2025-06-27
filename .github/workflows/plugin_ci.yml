@@ -44,4 +44,8 @@ jobs:
           name: simple_belfast_pi-linux
           path: build/src/libsimple_belfast_pi.so
 
-
+      - name: Upload installable plugin tar.gz
+        uses: actions/upload-artifact@v4
+        with:
+          name: simple_belfast_pi-installable
+          path: simple_belfast_pi.tar.gz
