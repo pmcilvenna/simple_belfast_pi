@@ -26,7 +26,7 @@ jobs:
           make
 
       - name: Upload plugin binary
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: simple_belfast_pi-linux
           path: build/src/libsimple_belfast_pi.so
