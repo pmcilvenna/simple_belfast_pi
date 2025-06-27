@@ -7,7 +7,26 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
-    uses: OpenCPN/plugins/.github/workflows/plugin_build.yml@master
-    with:
-      plugin: simple_belfast_pi
+  build-linux:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v3
+
+      - name: Install dependencies
+        run: |
+          sudo apt update
+          sudo apt install -y cmake build-essential wx-common libwxgtk3.0-gtk3-dev
+
+      - name: Build plugin
+        run: |
+          mkdir build
+          cd build
+          cmake ..
+          make
+
+      - name: Upload plugin binary
+        uses: actions/upload-artifact@v3
+        with:
+          name: simple_belfast_pi-linux
+          path: build/src/libsimple_belfast_pi.so
