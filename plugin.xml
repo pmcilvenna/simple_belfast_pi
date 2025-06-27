@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugins>
+  <plugin>
+    <name>simple_belfast_pi</name>
+    <version>1.0.0</version>
+    <summary>Simple Belfast Dot</summary>
+    <description>Displays a red dot near Belfast.</description>
+    <author>Philip McIlvenna</author>
+    <target>linux</target>
+    <binary>false</binary>
+    <filename>libsimple_belfast_pi.so</filename>
+  </plugin>
+</plugins>
