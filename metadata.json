@@ -1,0 +1,11 @@
+{
+  "id": "simple_belfast_pi",
+  "name": "Simple Belfast Dot",
+  "version": "1.0.0",
+  "description": "Draws a red dot near Belfast (approx. 54.6N, -5.9W).",
+  "author": "Philip McIlvenna",
+  "license": "MIT",
+  "website": "https://github.com/philipmc/simple_belfast_pi",
+  "target": "linux",
+  "binary": false
+}
