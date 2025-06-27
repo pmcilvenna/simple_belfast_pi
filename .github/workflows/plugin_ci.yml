@@ -1,0 +1,13 @@
+name: Build Plugin
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    uses: OpenCPN/plugins/.github/workflows/plugin_build.yml@master
+    with:
+      plugin: simple_belfast_pi
