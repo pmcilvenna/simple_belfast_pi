@@ -2,21 +2,25 @@ name: Build Plugin
 
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
   pull_request:
-    branches: [ main ]
+    branches: [ master ]
 
 jobs:
   build-linux:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout source
+      - name: Checkout plugin source
         uses: actions/checkout@v3
 
       - name: Install dependencies
         run: |
           sudo apt update
           sudo apt install -y cmake build-essential wx-common libwxgtk3.2-dev
+
+      - name: Clone OpenCPN headers
+        run: |
+          git clone --depth=1 https://github.com/OpenCPN/OpenCPN.git ../OpenCPN
 
       - name: Build plugin
         run: |
@@ -26,7 +30,7 @@ jobs:
           make
 
       - name: Upload plugin binary
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v3
         with:
           name: simple_belfast_pi-linux
           path: build/src/libsimple_belfast_pi.so
