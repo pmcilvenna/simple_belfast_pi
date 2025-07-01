@@ -3,7 +3,9 @@
   <plugin>
     <name>simple_belfast_pi</name>
     <version>1.0.0</version>
+    <release> 0 </release>
     <summary>Simple Belfast Dot</summary>
+    <api-version>1.18</api-version>
     <description>Displays a red dot near Belfast.</description>
     <author>Philip McIlvenna</author>
     <target>linux</target>
