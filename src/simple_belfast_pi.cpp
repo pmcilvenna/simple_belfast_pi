@@ -21,10 +21,10 @@ int simple_belfast_pi::Init(void) {
 bool simple_belfast_pi::RenderOverlay(wxDC &dc, PlugIn_ViewPort *vp) {
  if (!vp) return false;  // Check for valid viewport
     wxPoint p;
-    GetCanvasPixLL(vp, &p, lat, lon);
-     if (!GetCanvasPixLL(vp, &p, lat, lon)) {
+
+     GetCanvasPixLL(vp, &p, lat, lon)) {
             return false;  // Failed to get pixel coordinates
-        }
+
     dc.SetPen(*wxRED_PEN);
     dc.SetBrush(*wxRED_BRUSH);
     dc.DrawCircle(p, 10);
