@@ -22,7 +22,7 @@ bool simple_belfast_pi::RenderOverlay(wxDC &dc, PlugIn_ViewPort *vp) {
  if (!vp) return false;  // Check for valid viewport
     wxPoint p;
 
-    GetCanvasPixLL(vp, &p, lat, lon));
+    GetCanvasPixLL(vp, &p, lat, lon);
 
     dc.SetPen(*wxRED_PEN);
     dc.SetBrush(*wxRED_BRUSH);
