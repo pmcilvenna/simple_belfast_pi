@@ -4,7 +4,7 @@
 #include "ocpn_plugin.h"
 #include <wx/string.h>
 
-class simple_belfast_pi : public opencpn_plugin {
+class simple_belfast_pi : public opencpn_plugin_118 {
 public:
     simple_belfast_pi(void *ppimgr);
     ~simple_belfast_pi();
