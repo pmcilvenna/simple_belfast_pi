@@ -56,10 +56,7 @@ bool simple_belfast_pi::RenderOverlay(wxDC &dc, PlugIn_ViewPort *vp) {
         
         wxLogMessage("simple_belfast_pi: Viewport valid, getting pixel coordinates");
         wxPoint p;
-        if (!GetCanvasPixLL(vp, &p, lat, lon)) {
-            wxLogMessage("simple_belfast_pi: GetCanvasPixLL failed");
-            return false;
-        }
+        GetCanvasPixLL(vp, &p, lat, lon);
         
         wxLogMessage("simple_belfast_pi: Got coordinates (%d, %d), setting up drawing", p.x, p.y);
         dc.SetPen(*wxRED_PEN);
