@@ -1,0 +1,5 @@
+/home/pmcilvenna/opencpn-plugins/simple_belfast_pi_github_project/simple_belfast_pi_github/build/CMakeFiles/edit_cache.dir
+/home/pmcilvenna/opencpn-plugins/simple_belfast_pi_github_project/simple_belfast_pi_github/build/CMakeFiles/rebuild_cache.dir
+/home/pmcilvenna/opencpn-plugins/simple_belfast_pi_github_project/simple_belfast_pi_github/build/src/CMakeFiles/simple_belfast_pi.dir
+/home/pmcilvenna/opencpn-plugins/simple_belfast_pi_github_project/simple_belfast_pi_github/build/src/CMakeFiles/edit_cache.dir
+/home/pmcilvenna/opencpn-plugins/simple_belfast_pi_github_project/simple_belfast_pi_github/build/src/CMakeFiles/rebuild_cache.dir

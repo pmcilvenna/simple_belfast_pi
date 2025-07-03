@@ -24,6 +24,7 @@ extern "C" void destroy_pi(opencpn_plugin* p) {
     }
 }
 
+
 simple_belfast_pi::simple_belfast_pi(void *ppimgr)
     : opencpn_plugin(ppimgr) {
     wxLogMessage("simple_belfast_pi: Constructor called");
