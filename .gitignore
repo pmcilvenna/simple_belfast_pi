@@ -1,1 +1,10 @@
 .idea
+
+build/
+!build/src/*.so
+*.so.debug
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+

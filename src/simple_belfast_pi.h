@@ -1,30 +1,27 @@
 #ifndef _SIMPLE_BELFAST_PI_H_
 #define _SIMPLE_BELFAST_PI_H_
 
-#include "ocpn_plugin.h"
-#include <wx/string.h>
-#include <wx/dc.h>
+// Minimal plugin interface without external dependencies
+class simple_belfast_pi {
 
-class simple_belfast_pi : public opencpn_plugin_116 {
 public:
     simple_belfast_pi(void *ppimgr);
     ~simple_belfast_pi();
 
-    int Init(void) override;
-    bool RenderOverlay(wxDC &dc, PlugIn_ViewPort *vp) override;
+    int Init(void);
+    bool DeInit(void);
 
-    wxString GetCommonName() override;
-    wxString GetShortDescription() override;
-    wxString GetLongDescription() override;
+    const char* GetCommonName();
+    const char* GetShortDescription();
+    const char* GetLongDescription();
     
-    int GetAPIVersionMajor() override { return 1; }
-    int GetAPIVersionMinor() override { return 16; }
-    int GetPlugInVersionMajor() override { return 1; }
-    int GetPlugInVersionMinor() override { return 0; }
+    int GetAPIVersionMajor() { return 1; }
+    int GetAPIVersionMinor() { return 18; }
+    int GetPlugInVersionMajor() { return 1; }
+    int GetPlugInVersionMinor() { return 0; }
 
 private:
-    double lat = 54.6;
-    double lon = -5.9;
+    void* m_parent_mgr;
 };
 
 #endif
