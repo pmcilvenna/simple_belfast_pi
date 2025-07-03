@@ -3,6 +3,7 @@
 
 // Minimal plugin interface without external dependencies
 class simple_belfast_pi {
+
 public:
     simple_belfast_pi(void *ppimgr);
     ~simple_belfast_pi();
