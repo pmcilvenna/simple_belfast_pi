@@ -17,8 +17,8 @@ public:
     wxString GetLongDescription() override;
 
 private:
-    double lat = 54.6;
-    double lon = -5.9;
+    double lat = 54.0;
+    double lon = -6.0;
 };
 
 #endif

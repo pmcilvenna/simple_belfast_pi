@@ -26,7 +26,7 @@ bool simple_belfast_pi::RenderOverlay(wxDC &dc, PlugIn_ViewPort *vp) {
 
     dc.SetPen(*wxRED_PEN);
     dc.SetBrush(*wxRED_BRUSH);
-    dc.DrawCircle(p, 10);
+   // dc.DrawCircle(p, 10);
     return true;
 }
 
