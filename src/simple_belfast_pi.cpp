@@ -1,42 +1,36 @@
 #include "simple_belfast_pi.h"
-#include <wx/log.h>
 
-extern "C" opencpn_plugin* create_pi(void* ppimgr) {
+extern "C" void* create_pi(void* ppimgr) {
     return new simple_belfast_pi(ppimgr);
 }
 
-extern "C" void destroy_pi(opencpn_plugin* p) {
-    delete p;
+extern "C" void destroy_pi(void* p) {
+    delete static_cast<simple_belfast_pi*>(p);
 }
 
 simple_belfast_pi::simple_belfast_pi(void *ppimgr)
-    : opencpn_plugin_118(ppimgr) {
+    : m_parent_mgr(ppimgr) {
 }
 
 simple_belfast_pi::~simple_belfast_pi() {
 }
 
 int simple_belfast_pi::Init(void) {
-    return 0;  // Start with minimal capabilities
+    return 0;  // Minimal initialization
 }
 
 bool simple_belfast_pi::DeInit(void) {
     return true;
 }
 
-bool simple_belfast_pi::RenderOverlay(wxDC &dc, PlugIn_ViewPort *vp) {
-    // Minimal safe rendering - just return true for now
-    return true;
+const char* simple_belfast_pi::GetCommonName() {
+    return "Simple Belfast Dot";
 }
 
-wxString simple_belfast_pi::GetCommonName() {
-    return _T("Simple Belfast Dot");
+const char* simple_belfast_pi::GetShortDescription() {
+    return "Displays a red dot near Belfast.";
 }
 
-wxString simple_belfast_pi::GetShortDescription() {
-    return _T("Displays a red dot near Belfast.");
-}
-
-wxString simple_belfast_pi::GetLongDescription() {
-    return _T("This plugin draws a red dot near Belfast (approx. 54.6N, -5.9W).");
+const char* simple_belfast_pi::GetLongDescription() {
+    return "This plugin draws a red dot near Belfast (approx. 54.6N, -5.9W).";
 }
