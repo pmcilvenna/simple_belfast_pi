@@ -10,11 +10,16 @@ public:
     ~simple_belfast_pi();
 
     int Init(void) override;
-    bool RenderOverlay(wxDC &dc, PlugIn_ViewPort *vp);
+    bool RenderOverlay(wxDC &dc, PlugIn_ViewPort *vp) override;
 
     wxString GetCommonName() override;
     wxString GetShortDescription() override;
     wxString GetLongDescription() override;
+    
+    int GetAPIVersionMajor() override { return 1; }
+    int GetAPIVersionMinor() override { return 16; }
+    int GetPlugInVersionMajor() override { return 1; }
+    int GetPlugInVersionMinor() override { return 0; }
 
 private:
     double lat = 54.6;
