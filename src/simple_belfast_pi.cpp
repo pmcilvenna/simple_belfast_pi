@@ -2,6 +2,7 @@
 #include <wx/dcclient.h>
 #include <wx/log.h>
 
+
 extern "C" opencpn_plugin* create_pi(void* ppimgr) {
     wxLogMessage("simple_belfast_pi: create_pi called");
     try {
@@ -26,6 +27,7 @@ extern "C" void destroy_pi(opencpn_plugin* p) {
 
 
 simple_belfast_pi::simple_belfast_pi(void *ppimgr)
+
     : opencpn_plugin(ppimgr) {
     wxLogMessage("simple_belfast_pi: Constructor called");
 }
@@ -74,6 +76,7 @@ bool simple_belfast_pi::RenderOverlay(wxDC &dc, PlugIn_ViewPort *vp) {
         wxLogMessage("simple_belfast_pi: Exception in RenderOverlay");
         return false;
     }
+
 }
 
 wxString simple_belfast_pi::GetCommonName() {
