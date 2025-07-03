@@ -23,7 +23,7 @@ bool simple_belfast_pi::RenderOverlay(wxDC &dc, PlugIn_ViewPort *vp) {
     GetCanvasPixLL(vp, &p, lat, lon);
     dc.SetPen(*wxRED_PEN);
     dc.SetBrush(*wxRED_BRUSH);
-    dc.DrawCircle(p, 500000);
+    dc.DrawCircle(p, 5); // Draw a circle with radius 5 pixels
     return true;
 }
 
