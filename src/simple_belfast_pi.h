@@ -4,7 +4,7 @@
 #include "ocpn_plugin.h"
 #include <wx/string.h>
 
-class simple_belfast_pi : public opencpn_plugin {
+class simple_belfast_pi : public opencpn_plugin_118 {
 public:
     simple_belfast_pi(void *ppimgr);
     ~simple_belfast_pi();
@@ -17,8 +17,8 @@ public:
     wxString GetLongDescription() override;
 
 private:
-    double lat = 54.6;
-    double lon = -5.9;
+    double lat = 54.0;
+    double lon = -6.0;
 };
 
 #endif
