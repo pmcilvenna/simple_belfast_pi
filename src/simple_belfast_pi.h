@@ -5,12 +5,13 @@
 #include <wx/string.h>
 #include <wx/dc.h>
 
-class simple_belfast_pi : public opencpn_plugin_116 {
+class simple_belfast_pi : public opencpn_plugin_118 {
 public:
     simple_belfast_pi(void *ppimgr);
     ~simple_belfast_pi();
 
     int Init(void) override;
+    bool DeInit(void) override;
     bool RenderOverlay(wxDC &dc, PlugIn_ViewPort *vp) override;
 
     wxString GetCommonName() override;
@@ -18,7 +19,7 @@ public:
     wxString GetLongDescription() override;
     
     int GetAPIVersionMajor() override { return 1; }
-    int GetAPIVersionMinor() override { return 16; }
+    int GetAPIVersionMinor() override { return 18; }
     int GetPlugInVersionMajor() override { return 1; }
     int GetPlugInVersionMinor() override { return 0; }
 
