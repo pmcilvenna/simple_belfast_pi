@@ -30,8 +30,8 @@ optimized_aggregation AS (
         
         -- Optimized total_requests with minimal branching
         SUM(
-            CASE supply_router_id != 0
-                WHEN TRUE THEN routed_wo_missed_requests + routed_pm_missed_requests + routed_missed_requests + usable_requests
+            CASE 
+                WHEN supply_router_id != 0 THEN routed_wo_missed_requests + routed_pm_missed_requests + routed_missed_requests + usable_requests
                 ELSE usable_requests + blocked_requests + whiteops_blocked + prebid_blocked_internal_domain + 
                      prebid_blocked_internal_ip + prebid_blocked_internal_wo_cache + ss_protected_media_prebid_susp + 
                      ss_protected_media_prebid_fraud + prebid_blocked_internal_pm_cache_susp + prebid_blocked_internal_pm_cache_fraud
